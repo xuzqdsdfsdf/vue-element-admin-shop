@@ -258,7 +258,7 @@ export const asyncRoutes = [{
   redirect: '/renovation/pc_index',
   meta:{
   	title:'可视化',
-  	icon:'shopping',
+  	icon:'example',
   	roles:['admin','editor']
   },
   children:[
@@ -300,6 +300,45 @@ export const asyncRoutes = [{
       	roles: ['admin', 'editor'] // or you can only set roles in sub nav
       }
     }
+  ]
+},
+{
+  path:'/sale',
+  component:Layout,
+  redirect: '/sale/group_work',
+  meta:{
+  	title:'销售',
+  	icon:'shopping',
+  	roles:['admin','editor']
+  },
+  children:[
+    {
+      path:'group_work',
+      name:'groupWork',
+      component:()=>import ('@/views/sale/groupwork'),
+      meta:{
+      	title: '拼团',
+      	roles: ['admin', 'editor'] // or you can only set roles in sub nav
+      }
+    },
+    {
+      path:'sec_kill',
+      name:'secKill',
+      component:()=>import ('@/views/sale/seckill'),
+      meta:{
+      	title: '秒杀',
+      	roles: ['admin', 'editor'] // or you can only set roles in sub nav
+      }
+    },
+    {
+      path:'coupon',
+      name:'coupon',
+      component:()=>import ('@/views/sale/coupon'),
+      meta:{
+      	title: '优惠券',
+      	roles: ['admin', 'editor'] // or you can only set roles in sub nav
+      }
+    },
   ]
 },
 {

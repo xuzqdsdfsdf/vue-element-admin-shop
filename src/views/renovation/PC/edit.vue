@@ -29,11 +29,11 @@ style="overflow: inherit;"
 				  <!-- 状态栏 -->
                 <navbar></navbar>
                 <div
-					class="checked-box "
-					@click="handlechoose(item)"
-					:class="item.checked ? 'checked-box-active' : ''"
+                  class="checked-box "
+                  @click="handlechoose(item)"
+                  :class="item.checked ? 'checked-box-active' : ''"
                   v-for="(item, index) in templates"
-:key="index">
+                  :key="index">
                   <div v-if="item.checked" class="check-box-btn">
                     <!-- 这里为什么要用stop修饰符，因为在父容器中定义了一个选择的方法，
                             在触发排序函数的同时也会去触发handlechoose(),对选中的对象中isselected属性进行重置为当前点击的对象，
@@ -68,6 +68,7 @@ class="el-icon-bottom"
                             {{ item.type }}
                           </div> -->
                 </div>
+                <page-footer></page-footer>
               </div>
             </el-card>
           </el-col>
@@ -99,6 +100,7 @@ import dragList from '@/components/FreeComponent/common/Drag-list.vue'
 import icon from './component/icon.vue'
 import promotion from './component/promotion.vue'
 import imageAd from './component/imageAd.vue'
+import pageFooter from './component/footer.vue'
 export default {
   components: {
     componentForm,
@@ -108,6 +110,7 @@ export default {
     icon,
     promotion,
     imageAd,
+    pageFooter,
     navbar
   },
   computed: {
