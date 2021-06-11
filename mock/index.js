@@ -13,6 +13,7 @@ const audio = require('./audio')
 const order = require('./order')
 const povert = require('./poverty')
 const renovation = require('./renovation')
+const sale = require('./sale')
 const mocks = [
   ...user,
   ...role,
@@ -25,7 +26,8 @@ const mocks = [
   ...audio,
   ...order,
   ...povert,
-  ...renovation
+  ...renovation,
+  ...sale
 ]
 
 // for front mock
