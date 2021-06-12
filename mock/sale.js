@@ -10,7 +10,7 @@ const count = 50
 for (let i = 0; i < count; i++) {
   List.push(Mock.mock({
     id: '@increment(100)', // @increment = Random.increment()  @等价为random
-    'type|1': ['group','flash'],
+    'type|1': ['course','column'],
     value:
     {
         id: '@increment(100)',
@@ -20,7 +20,8 @@ for (let i = 0; i < count; i++) {
     },
     price: 10.00,
     p_num: 2,
-    auto: 1,
+    "status|1":[1,0],
+    "auto|1": [1,0],
     expire_time: 24,  //过期时间
     start_time: '@now',
     end_time: '@now',
